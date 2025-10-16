@@ -1,0 +1,142 @@
+[
+  {
+    "title": "A Survey of Distributed Consensus Protocols for Blockchain Networks",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/comst.2020.2969706",
+    "authors": [
+      "Yang Xiao",
+      "Ning Zhang",
+      "Wenjing Lou"
+    ],
+    "full_text_length": 200008,
+    "abstract": "Abstract—Since the inception of Bitcoin, cryptocurrencies\nand the underlying blockchain technology have attracted an\nincreasing interest from both academia and industry. Among\nvarious core components, consensus protocol is the deﬁning\ntechnology behind the security and performance of blockchain.\nFrom incremental modiﬁcations of Nakamoto consensus protocol\nto innovative alternative consensus mechanisms, many consensus\nprotocols have been proposed to improve the performance of\nthe blockchain network itself or to accommodate other speciﬁc\napplication needs.\nIn this survey, we present a comprehensive review and anal-\nysis on the state-of-the-art blockchain consensus protocols. To\nfacilitate the discussion of our analysis, we ﬁrst introduce the\nkey deﬁnitions and relevant results in the classic theory of fault\ntolerance which help to lay the foundation for further discussion.\nWe identify ﬁve core components of a blockchain consensus\nprotocol, namely, block proposal, block validation, inform",
+    "introduction": "INTRODUCTION\nS\nINCE Bitcoin’s inception in late 2008, cryptocurrencies\nand the underlying blockchain technology have piqued\ngreat interest from the ﬁnancial industry and society as a\nwhole. Blockchain is widely cited as a fully decentralized\nsystem and a secure-by-design technology. The blockchain\nitself is a database that keeps track of all transactions occurred\nin the network and is replicated at every participating node.\nIt essentially realizes a distributed ledger without relying on\na central authority to bootstrap the trust among participants\nor to clear the transactions. It also does not assume trust\namong the participating nodes. Blockchain is meant to enable\ntrusted computation among a group of mutually distrustful\nc⃝2020 IEEE. Personal use of this material is permitted. Permission from\nIEEE must be obtained for all other uses, including reprinting/republishing\nthis material for advertising or promotional purposes, collecting new collected\nworks for resale or redistribution to ",
+    "methodology": "methodology to combine the prevailing wisdom\nin order to design a consensus protocol for speciﬁc needs.\nThe work by Bano et al. [20] is the ﬁrst well-structured\nsurvey of blockchain consensus protocols. It identiﬁes three\nclasses of consensus protocols based on committee formation\nand block proposing rules: 1) PoW, 2) proof of X (PoX)\nalternatives to PoW, and 3) hybrid consensus protocols that\ntake advantage of classical distributed consensus techniques.\n3\nThis paper emphasizes the role of committee in hybrid con-\nsensus protocols. General discussions on the formation and\nconﬁguration of committee and possible solutions to multi-\ncommittee (i.e. sharding-based) consensus are provided. This\npaper also presents an evaluation framework that takes into\naccount the protocol safety (censorship resistance, DoS resis-\ntance and fault tolerance) and performance (throughput and\nlatency). Notably, this paper is the closest work to our survey\nin terms of classiﬁcation of block proposing mechanisms",
+    "results": "results in the classic theory of fault\ntolerance which help to lay the foundation for further discussion.\nWe identify ﬁve core components of a blockchain consensus\nprotocol, namely, block proposal, block validation, information\npropagation, block ﬁnalization, and incentive mechanism. A wide\nspectrum of blockchain consensus protocols are then carefully\nreviewed accompanied by algorithmic abstractions and vulner-\nability analyses. The surveyed consensus protocols are analyzed\nusing the ﬁve-component framework and compared with respect\nto different performance metrics. These analyses and compar-\nisons provide us new insights in the fundamental differences of\nvarious proposals in terms of their suitable application scenarios,\nkey assumptions, expected fault tolerance, scalability, drawbacks\nand trade-offs. We believe this survey will provide blockchain\ndevelopers and researchers a comprehensive view on the state-of-\nthe-art consensus protocols and facilitate the process of designing\nfuture",
+    "conclusion": "CONCLUSION\nIn this survey we provided a summary of classical fault-\ntolerance consensus research, a ﬁve-component framework for\na general blockchain consensus protocol, and a comprehensive\nreview of blockchain consensus protocols that have gained\ngreat popularity and potential. We analyzed these protocols\nwith respect to fault tolerance, performance, vulnerabilities\nand highlighted their use cases. Notably, many of these pro-\ntocols are still under development and are subject to major\nchanges at the time of writing. We hope the ﬁve-component\nframework, classiﬁcation methodology, protocol abstractions,\nperformance analyses, and discussion on protocol design pro-\nvided in this survey can help researchers and developers\ngrasp the fundamentals of blockchain consensus protocols and\nfacilitate future protocol design.\nACKNOWLEDGMENT\nThe authors would like to thank Dr. Christian Cachin,\nDr. Yonggang Wen, and the anonymous reviewers for their\nconstructive comments on this paper. This work was s",
+    "keywords": [
+      "consensus",
+      "block",
+      "blockchain",
+      "network",
+      "protocol",
+      "transaction",
+      "protocols",
+      "which",
+      "transactions",
+      "blocks"
+    ]
+  },
+  {
+    "title": "Blockchain for the metaverse: A Review",
+    "year": 2023,
+    "doi": "https://doi.org/10.1016/j.future.2023.02.008",
+    "authors": [
+      "Thien Huynh‐The",
+      "Thippa Reddy Gadekallu",
+      "Weizheng Wang"
+    ],
+    "full_text_length": 127359,
+    "abstract": "abstracts of the\npapers to determine their contributions. The data needed for our\nanalysis of the role of blockchain in the metaverse is extracted in\nthe final step.\n1.3. Paper organization\nThe rest of this paper is organized as follows. The funda-\nmentals of blockchain, the metaverse, and the role of blockchain\nin the metaverse are presented in Section 2. The applications\nof blockchain for the metaverse from technical perspectives are\ndiscussed in Section 3. In Section 4, we discuss the impact of\nblockchain for enabling technologies in the metaverse, including\nIoT, digital twin, multi-sensory XR applications and holographic\ntelepresence, AI, and big data. After that, we discuss about some\nof the exciting projects related to blockchain enabled metavserse\napplications in Section 5. Finally, we conclude the paper with\nsome potential research directions in Section 6.\n2. Blockchain and the metaverse: Preliminaries\nThe preliminary introduction to blockchain and the metaverse\nis presented in",
+    "introduction": "Introduction\nThe metaverse is the next phase of digital evolution that\ncan revolutionize the digital adoption to a staggering level and\nextends the domain of services beyond the standard systems with\nonline access. Digitization of services has become the trend for\nimproving the efficiency in the fields of business, entertainment,\neducation, or any other system that can be integrated with online\naccess over the past few decades. These services and systems\nwere improved to its maximum potential with the capabilities\n∗Corresponding author.\nE-mail addresses:\nthienht@hcmute.edu.vn (T. Huynh-The),\nthippareddy.g@vit.ac.in (T.R. Gadekallu), weizheng.wang@ieee.org (W. Wang),\ngokul.yenduri@vit.ac.in (G. Yenduri), pasika.ranaweera@ucd.ie (P. Ranaweera),\nviet.pham@tcd.ie (Q.-V. Pham), danielbcosta@ieee.org (D.B. da Costa),\nmadhusanka@ucd.ie (M. Liyanage).\nprovided with digital systems and online storage/processing fa-\ncilities at remote data centres and cloud platforms. With the\nefficiency, perfor",
+    "methodology": "Methodology, Investi-\ngation, Writing – original draft, Writing – review & editing, Vi-\nsualization, Supervision, Project administration. Thippa Reddy\nGadekallu: Conceptualization, Methodology, Investigation, Writ-\ning – original draft, Writing – review & editing, Visualization,\nSupervision, Project administration. Weizheng Wang: Concep-\ntualization, Methodology, Investigation, Writing – original draft,\nWriting – review & editing, Visualization, Supervision, Project\nadministration. Gokul Yenduri: Conceptualization, Methodology,\nInvestigation, Writing – original draft, Writing – review & editing,\nVisualization. Pasika Ranaweera: Conceptualization, Methodol-\nogy, Writing – original draft, Writing – review & editing, Vi-\nsualization. Quoc-Viet Pham: Conceptualization, Methodology,\nInvestigation, Writing – original draft, Writing – review & editing,\nVisualization, Supervision, Project administration. Daniel Bene-\nvides da Costa: Conceptualization, Methodology, Investigation,\nWriting – orig",
+    "results": "results in high latency and lower data\navailability. Scaling the mutable data is challenging compared to\nthe immutable data [69]. In the metaverse, numerous applications\nlike healthcare, traffic optimization, media, and entertainment\nwill generate large volumes of data and will be mostly real-time.\nData flexibility becomes an issue when the demand for real-time\ndata increases in a traditional data-sharing environment.\n3.3.3. How blockchain can help\nBlockchain technology can make the transactions in crypto\nexchange, education, and other applications more transparent\nand precise in the metaverse [68]. Applications like governance\nand finance will generate a decentralized, immutable record of all\ntransactions, allowing stakeholders to view these records. Hence,\nthe stakeholders of the metaverse will benefit from greater data\ntransparency [70]. Blockchain will enable applications and their\nusers to understand how third-party applications like thunder-\nbird, the bat, and pegasus manage data",
+    "conclusion": "Conclusion and research directions\nThe paper has comprehensively investigated and analyzed\nthe roles and impacts of blockchain for the foundation and de-\nvelopment of applications and services in the metaverse. The\nfundamental concepts of blockchain and the metaverse were\nsketched at the beginning of this work, along with the role of\nblockchain regarding the foundation and development of the\nmetaverse. Later in this work, several prominent technical aspects\nand use cases of blockchain in the metaverse were investigated\nexhaustively besides the insightful challenge analysis and appli-\ncability discussion given. Finally, some technical improvements of\nblockchain were provisioned for the metaverse, which in turn en-\nhances the performance and practicality of potential applications\nand services in the virtual world. Besides making the conclusion,\nwe sketch out some future research directions as below.\nRelying on the systematic investigation of blockchain for the\nmetaverse in both the techn",
+    "keywords": [
+      "metaverse",
+      "blockchain",
+      "digital",
+      "applications",
+      "virtual",
+      "technology",
+      "users",
+      "which",
+      "future",
+      "world"
+    ]
+  },
+  {
+    "title": "Solutions to Scalability of Blockchain: A Survey",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/access.2020.2967218",
+    "authors": [
+      "Qiheng Zhou",
+      "Huawei Huang",
+      "Zibin Zheng"
+    ],
+    "full_text_length": 89537,
+    "abstract": "ABSTRACT\nBlockchain-based decentralized cryptocurrencies have drawn much attention and been\nwidely-deployed in recent years. Bitcoin, the ﬁrst application of blockchain, achieves great success and\npromotes more development in this ﬁeld. However, Bitcoin encounters performance problems of low\nthroughput and high transaction latency. Other cryptocurrencies based on proof-of-work also inherit the\nﬂaws, leading to more concerns about the scalability of blockchain. This paper attempts to cover the existing\nscaling solutions for blockchain and classify them by level. In addition, we make comparisons between\ndifferent methods and list some potential directions for solving the scalability problem of blockchain.\nINDEX TERMS Blockchain, scalability.\nI. INTRODUCTION\nBlockchain as an emerging technology to realizing the dis-\ntributed ledgers has attracted extensive research attention\nrecently. Such a ledger intends to achieve decentralized trans-\naction management, which means that any node joinin",
+    "introduction": "INTRODUCTION\nBlockchain as an emerging technology to realizing the dis-\ntributed ledgers has attracted extensive research attention\nrecently. Such a ledger intends to achieve decentralized trans-\naction management, which means that any node joining the\nledger can initiate transactions equally according to rules, and\nthe transaction does not need to be managed by any third\nparty. All transactions in the system are stored in blocks,\nwhich are then linked as a chain and organized in chronolog-\nical order. Moreover, transactions that have written in blocks\nare immutable and transparent to all peers. With all these\nattractive characteristics, blockchain is drastically different\nfrom the traditional centralized trust entities and becomes\na signiﬁcant enabler to future ﬁnancial systems. In recent\nyears, the blockchain has developed rapidly, from Bitcoin [1],\nthe ﬁrst decentralized cryptocurrency, to Ethereum [2] with\nsmart contracts, followed by the emerging permissioned\nblockchain (e.g. Hype",
+    "methodology": "methods and list some potential directions for solving the scalability problem of blockchain.\nINDEX TERMS Blockchain, scalability.\nI. INTRODUCTION\nBlockchain as an emerging technology to realizing the dis-\ntributed ledgers has attracted extensive research attention\nrecently. Such a ledger intends to achieve decentralized trans-\naction management, which means that any node joining the\nledger can initiate transactions equally according to rules, and\nthe transaction does not need to be managed by any third\nparty. All transactions in the system are stored in blocks,\nwhich are then linked as a chain and organized in chronolog-\nical order. Moreover, transactions that have written in blocks\nare immutable and transparent to all peers. With all these\nattractive characteristics, blockchain is drastically different\nfrom the traditional centralized trust entities and becomes\na signiﬁcant enabler to future ﬁnancial systems. In recent\nyears, the blockchain has developed rapidly, from Bitcoin [1],\nth",
+    "results": "results in a large dissipation\nof electricity. Figure 1 shows the energy consumption of Bit-\ncoin comparing with that of some countries/states, where we\ncan ﬁnd that the entire Bitcoin network consumes even more\nenergy than many countries, such as Austria and Colombia,\nand barely ranks the 40th. Although PoW works securely,\nit’s far from green enough to be a sustainable consensus\nmechanism for future blockchain.\nStriving to improve the scalability of blockchains while\nmaintaining security and decentralization, many existing\napproaches have been proposed by literature. We will review\nsome mainstream solutions in the next section.\nIII. TAXONOMY OF THE APPROACHES TO SOLVING THE\nSCALABILITY OF BLOCKCHAIN\nBy Table 1, we classify the existing popular solutions of solv-\ning the scalability of blockchains into three layers: Layer1\nLayer2, and Layer0.\nLayer1 focuses on consensus, network and data structure\nof blockchain, all of which are executed on-chain. In con-\ntrast, Layer2 seeks the opport",
+    "conclusion": "CONCLUSION\nBlockchain technologies have grown rapidly in the past few\nyears and will be applied to more applications in different\nﬁelds in the foreseeable near future. With the increasing\nadoption of blockchain technology, the number of users has\nsteadily increased. However, the network congestion problem\nthat has occurred many times and enforced people to carefully\nthink about how to solve the scalability issue of blockchains.\nTo this end, a number of new solutions have been proposed.\nIn this paper, we describe the blockchain performance prob-\nlem mainly paying attention to scalability, and then classify\nthe existing mainstream solutions into several representative\nlayers. Besides, we elaborate some popular solutions such\nas Sharding, Sidechain, and cross-chain, intending to give a\ncomprehensive explanation. Furthermore, we also summarize\nseveral potential research directions and open issues based on\nthe drawback found, such as the huge amount of blockchain\ndata that need to be compre",
+    "keywords": [
+      "blockchain",
+      "block",
+      "transactions",
+      "transaction",
+      "network",
+      "scalability",
+      "which",
+      "solutions",
+      "online",
+      "available"
+    ]
+  },
+  {
+    "title": "Blockchain for Industry 4.0: A Comprehensive Review",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/access.2020.2988579",
+    "authors": [
+      "Umesh Bodkhe",
+      "Sudeep Tanwar",
+      "Karan Parekh"
+    ],
+    "full_text_length": 168223,
+    "abstract": "ABSTRACT Due to the proliferation of ICT during the last few decades, there is an exponential increase in\nthe usage of various smart applications such as smart farming, smart healthcare, supply-chain & logistics,\nbusiness, tourism and hospitality, energy management etc. However, for all the aforementioned applications,\nsecurity and privacy are major concerns keeping in view of the usage of the open channel, i.e., Internet for\ndata transfer. Although many security solutions and standards have been proposed over the years to enhance\nthe security levels of aforementioned smart applications, but the existing solutions are either based upon the\ncentralized architecture (having single point of failure) or having high computation and communication\ncosts. Moreover, most of the existing security solutions have focussed only on few aspects and fail to\naddress scalability, robustness, data storage, network latency, auditability, immutability, and traceability.\nTo handle the aforementioned issues,",
+    "introduction": "INTRODUCTION\nWith the wide popularity of Internet and related technologies,\nvarious Industry 4.0-based applications have been used across\nthe globe in which sensors and actuators sense, compute and\ncommunicate the data for industry automation. As in Industry\n4.0-based applications, data between different locations ﬂows\nusing an open channel, i.e., Internet, so threats to security and\nprivacy has also increased manyfold [1]. Such applications\nThe associate editor coordinating the review of this manuscript and\napproving it for publication was Wei Wei\n.\ndeal with data in large volumes and hence, so it is necessary\nto consider issues such as-data heterogeneity, data integrity,\nand data redundancy alongwith the security and privacy con-\ncerns. Moreover, different applications require datasets from\ndifferent domains in different formats. Therefore, it is also\nneeded to standardize the data format so that it can be used\nby different Industry 4.0-based applications.\nThe usage of smart phones a",
+    "methodology": "methodology to design, develop, and validate the\noverall blockchain solution. Later on, the authors in [62]\nconcentrated on one of the most critical issues, i.e, the imple-\nmentation of the blockchain in the supply-chain with the need\nof including all the different actors. Moreover, the sharing of\ninformation along the entire blockchain could lead to inertia\nin adopting the solution. For this reason, a correct imple-\nmentation of the blockchain technology in the supply-chain\nmust starts from an analysis of the needs and the objectives\nof the different actors involved. Keeping this objective in\nmind, the authors created a business model capable of high-\nlighting the returns in terms of both economic and customer\nsatisfaction.\nKshetri [65] presented an early evidence of linking the\nuse of the blockchain in supply-chain activities to increase\ntransparency and accountability. They also examined how\nthe blockchain is likely to affect the key SPM objectives\nsuch as cost, quality, speed, depe",
+    "results": "results an increase in both the\nnetwork data trafﬁc (in GBs) and overall expenditure (in\n79764\nThis work is licensed under a Creative Commons Attribution 4.0 License. For more information, see https://creativecommons.org/licenses/by/4.0/\nVOLUME 8, 2020\nU. Bodkhe et al.: Blockchain for Industry 4.0: Comprehensive Review\nFIGURE 1. Statistics of (a) Data traffic per month region wise and (b) Application-wise expenditure on Industry 4.0.\nFIGURE 2. (a) Increase in identity theft and (b) Generation of data traffic.\nBillions USD) as shown in Fig. 1 (a) and (b) as per the\nreport mentioned in [2], [3]. According to this report, smart\nindustries would spend $40B on IoT by 2020 in various sec-\ntors including transportation and manufacturing. However,\ndue to the large number of data exchanges over the Internet,\nmaintaining conﬁdentiality, privacy, and integrity becomes\na major issue in Industry 4.0 [4]. Moreover, according to\nthe surveys conducted by different agencies [5], [6] nearly\n60 millions ",
+    "conclusion": "conclusion that auditing\nand data provenance could be achieved by cloud service\nproviders through the MeDShare. Risk factors of data privacy\nwere also minimized through the proposed system, but issues\nsuch as scalability, data interoperability and key manage-\nment were not highlighted in the paper. Riﬁet al. [106]\ndiscussed the important problems such as scalability and\ninteroperability, and highlighted the advantages of includ-\ning the blockchain technology for medical data exchange to\nachieve the best performance.\nLiang et al. [107] developed a user-driven health infor-\nmation sharing solution to handle the issues of privacy and\nidentity management. To address these issues, they suggested\nthe use of the channel formation scheme and membership ser-\nvice of the blockchain. The authors also proposed a mobile-\ncontrolled system based on hyperledger fabric with the use\nof permissioned blockchains. The proposed work majorly\nfocused on the validation of the network nodes, and the\npreservati",
+    "keywords": [
+      "blockchain",
+      "smart",
+      "system",
+      "which",
+      "network",
+      "technology",
+      "security",
+      "energy",
+      "industry",
+      "applications"
+    ]
+  },
+  {
+    "title": "Blockchain technology in supply chain operations: Applications, challenges and research opportunities",
+    "year": 2020,
+    "doi": "https://doi.org/10.1016/j.tre.2020.102067",
+    "authors": [
+      "Pankaj Dutta",
+      "Tsan‐Ming Choi",
+      "Surabhi Somani"
+    ],
+    "full_text_length": 191330,
+    "abstract": "",
+    "introduction": "Introduction \n1.1. Blockchain and its implications on supply chain operations \nBlockchain is an innovative, decentralized, and distributive “state-of-the-art” technology, which maintains confidentiality, in­\ntegrity, and availability of all the transactions and data. It is a shared, open and distributed ledger that can help store/record data and \ntransactions backed by a cryptographic value (Choi, 2020a) across a peer-to-peer network (Chang et al., 2019a; Choi et al., 2019). \nBlockchain is a digital shared ledger which is distributed over the network. Once the records are added they cannot be edited without \nchanging the previous records (with the consent of all/majority of involved parties), which makes it very safe to business operations. \nIt has endless applications in various fields like designing smart contracts to track frauds in finance or securely share medical records \nbetween healthcare professionals. Fig. 1 shows how blockchain improves the transaction journey (O'Leary, 2017",
+    "methodology": "methodology. It uncovers \nthe current trends of blockchain in SC operations and paves way for future research. As a remark, the scope of this work is restricted \nto SCs. The trend of research in this area has been accelerating since 2017 and has continued at an enormous pace. Through this \npaper, we try to provide insights by addressing the following research questions:   \nHow can blockchain enhance SC performance?   \nWhat are the sectors most impacted by blockchain technology?   \nWhich SC functionalities are most impacted and in which way?   \nWhat are the different applications of blockchain in SCs of various sectors?   \nWhat are the challenges and future scope of research for blockchain implementation in SC? \n1.3. Organization \nThis work has the following structure: Section 1 gives a short introduction about blockchain and its functionality and applications \nin transforming SCs. Section 2 entails in detail the research methodology adopted in this work. Section 3 gives a detailed expl",
+    "results": "results in sub- \noptimal business performance. This creates strong arguments and a high level of distrust amongst the associated parties. A proper \nsmart contract implementation for any request of modification or payments would automatically trigger a process flow based on \nappropriate approvals achieving speed, trust and improved business performance (Downey et al., 2018). Blockchain technology can \nalso be effectively used for customer-order-process management (COM) and improve the efficiency, traceability and visibility of \norders (Martinez et al., 2019). Asset management is also enabled by blockchain through its “proof of concept algorithm” which \nguarantees transparency, reliability and efficiency (Notheisen et al., 2017). Pilot prototypes like DAO (Decentralized Autonomous \nOrganization) have been implemented to replace the traditional management system with automated governance but have to be \nhalted due to security breach (Hütten, 2019). Blockchain technology adoption and imple",
+    "conclusion": "conclusion in Section 8. \n2. Review methodology \nWith the attempt to examine the related literature on blockchain’s applications in SCs, we have undertaken a systematic literature \nreview of all the relevant papers and following review methodology has been adopted. \n2.1. Searching methodology for literature \nThe searching is conducted on the “Scopus platform”. Fig. 2 shows the search methodology with the way of finding related \narticles. Note that we exclude some types of articles such as editorials as they are not deemed as original research or survey. \n2.2. Descriptive statistics \n2.2.1. Subject wise classification \nOur study considers top 13 subject areas, which include a total of 178 papers. The chart in Fig. 3 clearly shows that Computer \nScience, Engineering, Business Management and Accounting, and Social Sciences are the major areas in which related research has \nbeen published. Material Science, Decision Sciences, Medicine, Finance and Environmental Sciences have also seen an u",
+    "keywords": [
+      "blockchain",
+      "technology",
+      "supply",
+      "chain",
+      "management",
+      "research",
+      "paper",
+      "which",
+      "implementation",
+      "information"
+    ]
+  }
+]

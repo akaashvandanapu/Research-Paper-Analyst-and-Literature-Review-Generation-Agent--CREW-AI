@@ -1,0 +1,205 @@
+{
+  "total_papers": 5,
+  "year_distribution": {
+    "2020": 4,
+    "2023": 1
+  },
+  "keyword_frequency": {
+    "blockchain": 5,
+    "which": 5,
+    "network": 3,
+    "technology": 3,
+    "block": 2,
+    "transaction": 2,
+    "transactions": 2,
+    "applications": 2,
+    "consensus": 1,
+    "protocol": 1,
+    "protocols": 1,
+    "blocks": 1,
+    "metaverse": 1,
+    "digital": 1,
+    "virtual": 1,
+    "users": 1,
+    "future": 1,
+    "world": 1,
+    "scalability": 1,
+    "solutions": 1
+  },
+  "themes": [
+    {
+      "theme_name": "Blockchain",
+      "paper_count": 5,
+      "papers": [
+        {
+          "title": "A Survey of Distributed Consensus Protocols for Blockchain Networks",
+          "year": 2020
+        },
+        {
+          "title": "Blockchain for the metaverse: A Review",
+          "year": 2023
+        },
+        {
+          "title": "Solutions to Scalability of Blockchain: A Survey",
+          "year": 2020
+        },
+        {
+          "title": "Blockchain for Industry 4.0: A Comprehensive Review",
+          "year": 2020
+        },
+        {
+          "title": "Blockchain technology in supply chain operations: Applications, challenges and research opportunities",
+          "year": 2020
+        }
+      ]
+    },
+    {
+      "theme_name": "Which",
+      "paper_count": 5,
+      "papers": [
+        {
+          "title": "A Survey of Distributed Consensus Protocols for Blockchain Networks",
+          "year": 2020
+        },
+        {
+          "title": "Blockchain for the metaverse: A Review",
+          "year": 2023
+        },
+        {
+          "title": "Solutions to Scalability of Blockchain: A Survey",
+          "year": 2020
+        },
+        {
+          "title": "Blockchain for Industry 4.0: A Comprehensive Review",
+          "year": 2020
+        },
+        {
+          "title": "Blockchain technology in supply chain operations: Applications, challenges and research opportunities",
+          "year": 2020
+        }
+      ]
+    },
+    {
+      "theme_name": "Network",
+      "paper_count": 3,
+      "papers": [
+        {
+          "title": "A Survey of Distributed Consensus Protocols for Blockchain Networks",
+          "year": 2020
+        },
+        {
+          "title": "Solutions to Scalability of Blockchain: A Survey",
+          "year": 2020
+        },
+        {
+          "title": "Blockchain for Industry 4.0: A Comprehensive Review",
+          "year": 2020
+        }
+      ]
+    },
+    {
+      "theme_name": "Technology",
+      "paper_count": 3,
+      "papers": [
+        {
+          "title": "Blockchain for the metaverse: A Review",
+          "year": 2023
+        },
+        {
+          "title": "Blockchain for Industry 4.0: A Comprehensive Review",
+          "year": 2020
+        },
+        {
+          "title": "Blockchain technology in supply chain operations: Applications, challenges and research opportunities",
+          "year": 2020
+        }
+      ]
+    },
+    {
+      "theme_name": "Block",
+      "paper_count": 2,
+      "papers": [
+        {
+          "title": "A Survey of Distributed Consensus Protocols for Blockchain Networks",
+          "year": 2020
+        },
+        {
+          "title": "Solutions to Scalability of Blockchain: A Survey",
+          "year": 2020
+        }
+      ]
+    },
+    {
+      "theme_name": "Transaction",
+      "paper_count": 2,
+      "papers": [
+        {
+          "title": "A Survey of Distributed Consensus Protocols for Blockchain Networks",
+          "year": 2020
+        },
+        {
+          "title": "Solutions to Scalability of Blockchain: A Survey",
+          "year": 2020
+        }
+      ]
+    },
+    {
+      "theme_name": "Transactions",
+      "paper_count": 2,
+      "papers": [
+        {
+          "title": "A Survey of Distributed Consensus Protocols for Blockchain Networks",
+          "year": 2020
+        },
+        {
+          "title": "Solutions to Scalability of Blockchain: A Survey",
+          "year": 2020
+        }
+      ]
+    },
+    {
+      "theme_name": "Applications",
+      "paper_count": 2,
+      "papers": [
+        {
+          "title": "Blockchain for the metaverse: A Review",
+          "year": 2023
+        },
+        {
+          "title": "Blockchain for Industry 4.0: A Comprehensive Review",
+          "year": 2020
+        }
+      ]
+    },
+    {
+      "theme_name": "Consensus",
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "A Survey of Distributed Consensus Protocols for Blockchain Networks",
+          "year": 2020
+        }
+      ]
+    },
+    {
+      "theme_name": "Protocol",
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "A Survey of Distributed Consensus Protocols for Blockchain Networks",
+          "year": 2020
+        }
+      ]
+    }
+  ],
+  "statistics": {
+    "avg_text_length": 155291,
+    "papers_with_methodology": 5,
+    "papers_with_conclusion": 5,
+    "unique_authors": 15
+  },
+  "paper_groupings": {
+    "recent_papers": 0,
+    "older_papers": 5
+  }
+}

@@ -1,0 +1,511 @@
+# config/tasks.yaml
+
+create_research_strategy:
+  description: >
+    Analyze the research topic: {topic}
+    
+    Create a comprehensive research strategy JSON file containing:
+    
+    1. **Keywords** (10-15 search terms):
+       - Core concepts and related terms
+       - Synonyms and alternative phrases
+       - Boolean search combinations
+    
+    2. **Research Questions** (3-5 questions):
+       - What methodologies are used in this field?
+       - What are the key findings and results?
+       - What are current limitations and gaps?
+       - What future directions are emerging?
+    
+    3. **Selection Criteria**:
+       - Year range: 2020-2025
+       - Target: 5 peer-reviewed papers
+       - Quality indicators: citation count, journal quality, methodology rigor
+    
+    Save to outputs/research_strategy.json with structure:
+    {
+      "topic": string,
+      "keywords": [10-15 terms],
+      "research_questions": [3-5 questions],
+      "year_range": [2020, 2025],
+      "target_count": 5,
+      "quality_criteria": [list]
+    }
+    
+  expected_output: >
+    JSON file with complete research strategy including keywords, research questions, 
+    year range, and quality criteria. Only json text, no explanations. Not even apostrophes.
+  agent: research_coordinator
+
+search_and_download_papers:
+  description: >
+    Download exactly 5 high-quality research papers for topic: {topic}
+    
+    **Process**:
+    1. Read outputs/research_strategy.json for keywords and criteria
+    2. Use PaperDownloadTool with: topic={topic}, target_count=5, from_year=2020, to_year=2025
+    3. Prioritize papers with:
+       - High relevance to research questions
+       - Clear methodology sections
+       - Recent publication (2023-2025 preferred)
+       - High citation counts
+       - Open access availability
+    
+    **Collect for each paper**:
+    - Title, authors, year, journal, DOI
+    - Citation count from OpenAlex
+    - Abstract (if available)
+    - File path of downloaded PDF
+    
+    Save to outputs/paper_metadata.json:
+    [
+      {
+        "title": string,
+        "authors": [list],
+        "year": integer,
+        "journal": string,
+        "doi": string,
+        "citation_count": integer,
+        "abstract": string,
+        "file_path": string
+      },
+      ...
+    ]
+    
+  expected_output: >
+    5 downloaded PDFs in papers/ folder and paper_metadata.json with complete 
+    metadata for all papers.
+  agent: paper_discovery
+  context:
+    - create_research_strategy
+
+extract_paper_content:
+  description: >
+    Extract detailed content from all 5 research papers.
+    
+    **Input**: Read outputs/paper_metadata.json for list of papers.
+    
+    **For Each Paper, Extract**:
+    
+    1. **Basic Info**: Title, authors, year, DOI, paper type
+    
+    2. **Research Problem**: What question/problem is addressed?
+    
+    3. **DETAILED METHODOLOGY** (Critical):
+       - Research design (experimental, survey, case study, etc.)
+       - Sample size and sampling method
+       - Data collection procedures and instruments
+       - Data analysis techniques (statistical tests, algorithms)
+       - Step-by-step procedures (describe what was done)
+       - For ML/AI studies: models used, hyperparameters, datasets, frameworks
+    
+    4. **DETAILED RESULTS** (Critical):
+       - Primary findings with specific values
+       - Statistical significance (p-values, confidence intervals)
+       - Effect sizes and performance metrics (accuracy, F1, etc.)
+       - Key tables and figures described
+       - 5-7 major findings listed
+    
+    5. **Discussion**: Interpretation, implications, limitations, future work
+    
+    Save to outputs/extracted_content.json:
+    [
+      {
+        "paper_id": integer,
+        "title": string,
+        "methodology": {
+          "research_design": string,
+          "sample_size": integer,
+          "data_collection": string,
+          "analysis_methods": [list],
+          "detailed_procedures": string (200-400 words),
+          "technical_details": {}
+        },
+        "results": {
+          "primary_outcomes": [list with values],
+          "statistics": [p-values, effect sizes],
+          "performance_metrics": {},
+          "key_findings": [5-7 findings]
+        },
+        "limitations": [list],
+        "implications": string
+      },
+      ...
+    ]
+    
+    **Important**: Capture as much detail as possible about methodology and results.
+    
+  expected_output: >
+    JSON file with comprehensive extracted content from all papers, especially 
+    detailed methodology (procedures, analysis) and results (statistics, findings).
+  agent: content_extractor
+  context:
+    - search_and_download_papers
+
+synthesize_findings:
+  description: >
+    Conduct comprehensive synthesis and comparison of all papers.
+    
+    **Input**: Read outputs/extracted_content.json
+    
+    **Analysis Tasks**:
+    
+    1. **Identify 4-6 Major Themes**:
+       - Group papers by common topics/approaches
+       - For each theme: name, description, papers included, key insights
+    
+    2. **Compare Methodologies**:
+       - Research designs used (distribution by type)
+       - Sample sizes (range, mean)
+       - Data collection methods compared
+       - Analytical techniques (statistical tests, algorithms)
+       - Strengths and weaknesses of each approach
+    
+    3. **Synthesize Results**:
+       - Convergent findings (consistent across papers)
+       - Divergent findings (contradictions)
+       - Strongest effects reported
+       - Practical implications
+    
+    4. **Generate Statistics**:
+       - Year distribution
+       - Citation statistics (mean, range, total)
+       - Keyword frequency
+       - Geographic/journal distribution
+    
+    Save to outputs/synthesis.json:
+    {
+      "themes": [
+        {
+          "name": string,
+          "description": string,
+          "papers": [list],
+          "key_insights": string
+        },
+        ...
+      ],
+      "methodology_comparison": {
+        "research_designs": {},
+        "sample_sizes": {},
+        "analysis_techniques": []
+      },
+      "results_synthesis": {
+        "convergent_findings": [5-7 findings],
+        "divergent_findings": [list],
+        "strongest_effects": [list]
+      },
+      "statistics": {}
+    }
+    
+  expected_output: >
+    Comprehensive synthesis with 4-6 themes, detailed methodology comparisons, 
+    synthesized results, and statistical summaries.
+  agent: synthesis_analyst
+  context:
+    - extract_paper_content
+
+evaluate_research_quality:
+  description: >
+    Critically evaluate the quality of all research papers.
+    
+    **Input**: Read outputs/extracted_content.json ONLY
+    (You do NOT need synthesis.json for quality evaluation - you can evaluate 
+    papers independently based on their extracted content)
+    
+    **For Each Paper, Assess**:
+    
+    1. **Methodological Quality** (Score 1-10):
+       - Research design appropriateness
+       - Sample size adequacy
+       - Measurement validity and reliability
+       - Data analysis appropriateness
+       - Transparency and replicability
+    
+    2. **Identify Biases**:
+       - Selection bias
+       - Measurement bias
+       - Reporting bias
+       - Other potential biases
+    
+    3. **List Limitations**:
+       - Author-acknowledged limitations
+       - Additional limitations you identify
+    
+    4. **Strengths and Weaknesses**:
+       - 3-5 major strengths
+       - 3-5 major weaknesses
+    
+    5. **Research Gaps** (Across All Papers):
+       - Methodological gaps (10-12 items)
+       - Theoretical gaps (5-7 items)
+       - Practical gaps (5-7 items)
+    
+    6. **Future Directions**:
+       - Immediate research priorities (5-7 specific studies)
+       - Medium-term goals (5-7 directions)
+       - Long-term vision (3-5 transformative questions)
+    
+    Save to outputs/evaluation.json:
+    {
+      "paper_evaluations": [
+        {
+          "paper_id": integer,
+          "methodology_score": float (1-10),
+          "biases": [],
+          "limitations": [],
+          "strengths": [3-5 items],
+          "weaknesses": [3-5 items]
+        },
+        ...
+      ],
+      "research_gaps": {
+        "methodological": [10-12 items],
+        "theoretical": [5-7 items],
+        "practical": [5-7 items]
+      },
+      "future_directions": {
+        "immediate": [5-7 studies],
+        "medium_term": [5-7 directions],
+        "long_term": [3-5 questions]
+      }
+    }
+    
+  expected_output: >
+    Quality assessment with methodology scores, identified biases, limitations, 
+    strengths/weaknesses for each paper, plus comprehensive research gaps and 
+    future directions.
+  agent: critical_evaluator
+  context:
+    - extract_paper_content  # ✅ ONLY THIS - enables parallel execution
+
+
+generate_literature_review:
+  description: >
+    Create a comprehensive literature review document.
+    
+    **CRITICAL: Read files from the outputs/ directory with full paths**:
+    - outputs/research_strategy.json
+    - outputs/paper_metadata.json
+    - outputs/extracted_content.json
+    - outputs/synthesis.json
+    - outputs/evaluation.json
+    
+    **Step 1: Read All Input Files**
+    Use the FileReadTool to read each file with FULL PATH:
+    1. Read file: outputs/research_strategy.json
+    2. Read file: outputs/paper_metadata.json
+    3. Read file: outputs/extracted_content.json
+    4. Read file: outputs/synthesis.json
+    5. Read file: outputs/evaluation.json
+    
+    **Step 2: Generate Document Structure** (Target: 4000-6000 words)
+    
+    # Literature Review: {topic}
+    
+    ## Executive Summary (300-400 words)
+    - Scope: 5 papers from 2020-2025
+    - Major themes identified (from synthesis.json)
+    - Key findings across studies (from extracted_content.json)
+    - Primary research gaps (from evaluation.json)
+    - Future research priorities
+    - Practical implications
+    
+    ## 1. Introduction (500-600 words)
+    - Background and context of {topic}
+    - Research objectives (from research_strategy.json)
+    - Scope and boundaries
+    - Importance of this review
+    
+    ## 2. Methodology (400-500 words)
+    
+    ### 2.1 Search Strategy
+    - Keywords used (from research_strategy.json)
+    - Databases searched: OpenAlex
+    - Search period: 2020-2025
+    
+    ### 2.2 Selection Criteria
+    - Inclusion criteria: peer-reviewed, English, empirical studies
+    - Exclusion criteria: non-peer-reviewed, insufficient detail
+    - Target: 5 high-quality papers
+    
+    ### 2.3 Papers Included
+    **Table 1: Overview of Included Studies**
+    
+    | ID | Authors | Year | Journal | Study Type | Sample Size | Citations |
+    |-----|---------|------|---------|------------|-------------|-----------|
+    (Create table from paper_metadata.json)
+    
+    ## 3. Thematic Analysis (1500-2000 words)
+    
+    For EACH theme from synthesis.json:
+    
+    ### 3.X [Theme Name]
+    
+    #### Overview
+    - Description of theme
+    - Number of papers addressing it
+    - Significance
+    
+    #### Papers in This Theme
+    For each paper in this theme (from extracted_content.json):
+    - **[Author Year]**: Research problem, methodology summary (2-3 sentences), 
+      key results (2-3 sentences with specific metrics)
+    
+    #### Synthesis
+    - Common findings across papers
+    - Divergent results
+    - Patterns identified
+    
+    ## 4. Methodological Comparison (600-800 words)
+    
+    ### 4.1 Research Designs
+    - Distribution of study types (from synthesis.json)
+    - Experimental vs observational approaches
+    
+    **Table 2: Methodological Characteristics**
+    
+    | Paper | Design | Sample | Data Collection | Analysis | Key Strength |
+    |-------|--------|--------|-----------------|----------|--------------|
+    (Create from extracted_content.json)
+    
+    ### 4.2 Analytical Techniques
+    - Statistical methods used
+    - Machine learning algorithms (if applicable)
+    - Software and tools
+    
+    **Table 3: Analysis Methods**
+    
+    | Paper | Statistical Tests | Software | Effect Sizes | Metrics |
+    |-------|------------------|----------|--------------|---------|
+    (Create from extracted_content.json)
+    
+    ## 5. Key Findings (600-800 words)
+    
+    ### 5.1 Convergent Findings
+    List 5-7 consistent findings (from synthesis.json):
+    - **Finding 1**: Description with supporting papers [Author Year], [Author Year]
+      - Specific metrics/results
+    
+    ### 5.2 Divergent Findings
+    - Contradictions identified
+    - Possible explanations
+    
+    ### 5.3 Practical Implications
+    - Real-world applications
+    - Industry relevance
+    
+    **Table 4: Summary of Key Results**
+    
+    | Paper | Primary Outcome | Effect Size | P-value | Conclusion |
+    |-------|----------------|-------------|---------|------------|
+    (Create from extracted_content.json)
+    
+    ## 6. Quality Assessment (400-600 words)
+    
+    For each paper (from evaluation.json):
+    - **[Author Year] - Quality Score: X/10**
+      - Strengths: (list from evaluation.json)
+      - Weaknesses: (list from evaluation.json)
+    
+    **Table 5: Quality Assessment Summary**
+    
+    | Paper | Methodology Score | Sample Adequacy | Bias Risk | Overall |
+    |-------|------------------|-----------------|-----------|---------|
+    (Create from evaluation.json)
+    
+    ### Common Limitations
+    - List limitations present across multiple papers
+    
+    ## 7. Research Gaps (400-500 words)
+    
+    From evaluation.json, list:
+    
+    ### 7.1 Methodological Gaps
+    - List 10-12 methodological gaps
+    
+    ### 7.2 Theoretical Gaps
+    - List 5-7 theoretical gaps
+    
+    ### 7.3 Practical Gaps
+    - List 5-7 practical gaps
+    
+    ### Priority Gaps
+    - Top 5 most critical gaps
+    
+    ## 8. Future Directions (400-500 words)
+    
+    From evaluation.json:
+    
+    ### 8.1 Immediate Priorities
+    - List 5-7 specific research studies needed
+    
+    ### 8.2 Medium-Term Goals
+    - List 5-7 research directions
+    
+    ### 8.3 Long-Term Vision
+    - List 3-5 transformative questions
+    
+    ### Recommendations
+    - For researchers: actionable recommendations
+    - For practitioners: implementation guidance
+    
+    ## 9. Conclusion (300-400 words)
+    - Summary of major findings
+    - State of the field
+    - Critical gaps identified
+    - Most important future directions
+    
+    ## 10. References
+    
+    Use CitationFormatterTool with:
+    - metadata_file: outputs/paper_metadata.json
+    - style: APA
+    
+    Format each citation properly with DOI links.
+    
+    ## 11. Appendices
+    
+    ### Appendix A: Search Strategy
+    - Complete keyword list (from research_strategy.json)
+    - Search dates and databases
+    
+    ### Appendix B: Summary Statistics
+    
+    **Table A1: Citation Statistics**
+    (From paper_metadata.json)
+    
+    **Table A2: Year Distribution**
+    (From synthesis.json)
+    
+    **Table A3: Keyword Frequency**
+    (From synthesis.json)
+    
+    ---
+    
+    **Formatting Guidelines**:
+    - Use proper Markdown syntax (##, ###, ####)
+    - Use **bold** for paper titles when first mentioned
+    - Use *italics* for journal names
+    - Create well-formatted tables with | alignment
+    - Cite papers as [Author, Year] throughout
+    - Ensure 4000-6000 total words
+    - Academic tone throughout
+    
+    **IMPORTANT**: You MUST read all 5 input files from outputs/ directory 
+    using FileReadTool before generating the review. The files contain all 
+    the data you need.
+    
+    Save the complete document to: outputs/literature_review_final.md
+    
+  expected_output: >
+    A comprehensive, publication-ready literature review (4000-6000 words) 
+    in Markdown format with all sections, multiple comparison tables, proper 
+    APA citations, and detailed appendices. All data should come from the 
+    5 input JSON files read from the outputs/ directory.
+  agent: report_generator
+  context:
+    - create_research_strategy
+    - search_and_download_papers
+    - extract_paper_content
+    - synthesize_findings
+    - evaluate_research_quality

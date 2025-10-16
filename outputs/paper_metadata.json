@@ -1,0 +1,1940 @@
+[
+  {
+    "title": "A Survey of Distributed Consensus Protocols for Blockchain Networks",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/comst.2020.2969706",
+    "file_path": "papers\\blockchain\\2020-A Survey of Distributed Consensus Protocols for Blockchain Networks.pdf",
+    "authors": [
+      "Yang Xiao",
+      "Ning Zhang",
+      "Wenjing Lou"
+    ],
+    "abstract": {
+      "Since": [
+        0
+      ],
+      "the": [
+        1,
+        7,
+        28,
+        32,
+        58,
+        61,
+        83,
+        90,
+        98,
+        105,
+        115,
+        167,
+        187,
+        223,
+        229
+      ],
+      "inception": [
+        2
+      ],
+      "of": [
+        3,
+        36,
+        41,
+        60,
+        92,
+        108,
+        125,
+        145,
+        190,
+        195,
+        231
+      ],
+      "Bitcoin,": [
+        4
+      ],
+      "cryptocurrencies": [
+        5
+      ],
+      "and": [
+        6,
+        19,
+        34,
+        80,
+        101,
+        139,
+        157,
+        170,
+        180,
+        207,
+        217,
+        227
+      ],
+      "underlying": [
+        8
+      ],
+      "blockchain": [
+        9,
+        62,
+        85,
+        127,
+        146,
+        215
+      ],
+      "technology": [
+        10,
+        30
+      ],
+      "have": [
+        11,
+        53
+      ],
+      "attracted": [
+        12
+      ],
+      "an": [
+        13
+      ],
+      "increasing": [
+        14
+      ],
+      "interest": [
+        15
+      ],
+      "from": [
+        16
+      ],
+      "both": [
+        17
+      ],
+      "academia": [
+        18
+      ],
+      "industry.": [
+        20
+      ],
+      "Among": [
+        21
+      ],
+      "various": [
+        22,
+        191
+      ],
+      "core": [
+        23,
+        123
+      ],
+      "components,": [
+        24
+      ],
+      "consensus": [
+        25,
+        43,
+        48,
+        51,
+        86,
+        128,
+        147,
+        162,
+        225
+      ],
+      "protocol": [
+        26,
+        44
+      ],
+      "is": [
+        27
+      ],
+      "defining": [
+        29
+      ],
+      "behind": [
+        31
+      ],
+      "security": [
+        33
+      ],
+      "performance": [
+        35,
+        59,
+        176
+      ],
+      "blockchain.": [
+        37
+      ],
+      "From": [
+        38
+      ],
+      "incremental": [
+        39
+      ],
+      "modifications": [
+        40
+      ],
+      "Nakamoto": [
+        42
+      ],
+      "to": [
+        45,
+        56,
+        66,
+        113,
+        174
+      ],
+      "innovative": [
+        46
+      ],
+      "alternative": [
+        47
+      ],
+      "mechanisms,": [
+        49
+      ],
+      "many": [
+        50
+      ],
+      "protocols": [
+        52,
+        148,
+        163,
+        226
+      ],
+      "been": [
+        54
+      ],
+      "proposed": [
+        55
+      ],
+      "improve": [
+        57
+      ],
+      "network": [
+        63
+      ],
+      "itself": [
+        64
+      ],
+      "or": [
+        65
+      ],
+      "accommodate": [
+        67
+      ],
+      "other": [
+        68
+      ],
+      "specific": [
+        69
+      ],
+      "application": [
+        70,
+        198
+      ],
+      "needs.": [
+        71
+      ],
+      "In": [
+        72
+      ],
+      "this": [
+        73,
+        211
+      ],
+      "survey,": [
+        74
+      ],
+      "we": [
+        75,
+        95
+      ],
+      "present": [
+        76
+      ],
+      "a": [
+        77,
+        126,
+        219
+      ],
+      "comprehensive": [
+        78,
+        220
+      ],
+      "review": [
+        79
+      ],
+      "analysis": [
+        81
+      ],
+      "on": [
+        82,
+        222
+      ],
+      "state-of-the-art": [
+        84,
+        224
+      ],
+      "protocols.": [
+        87,
+        234
+      ],
+      "To": [
+        88
+      ],
+      "facilitate": [
+        89,
+        228
+      ],
+      "discussion": [
+        91
+      ],
+      "our": [
+        93
+      ],
+      "analysis,": [
+        94
+      ],
+      "first": [
+        96
+      ],
+      "introduce": [
+        97
+      ],
+      "key": [
+        99,
+        200
+      ],
+      "definitions": [
+        100
+      ],
+      "relevant": [
+        102
+      ],
+      "results": [
+        103
+      ],
+      "in": [
+        104,
+        186,
+        193
+      ],
+      "classic": [
+        106
+      ],
+      "theory": [
+        107
+      ],
+      "fault": [
+        109,
+        203
+      ],
+      "tolerance": [
+        110
+      ],
+      "which": [
+        111
+      ],
+      "help": [
+        112
+      ],
+      "lay": [
+        114
+      ],
+      "foundation": [
+        116
+      ],
+      "for": [
+        117
+      ],
+      "further": [
+        118
+      ],
+      "discussion.": [
+        119
+      ],
+      "We": [
+        120,
+        209
+      ],
+      "identify": [
+        121
+      ],
+      "five": [
+        122
+      ],
+      "components": [
+        124
+      ],
+      "protocol,": [
+        129
+      ],
+      "namely,": [
+        130
+      ],
+      "block": [
+        131,
+        133,
+        137
+      ],
+      "proposal,": [
+        132
+      ],
+      "validation,": [
+        134
+      ],
+      "information": [
+        135
+      ],
+      "propagation,": [
+        136
+      ],
+      "finalization,": [
+        138
+      ],
+      "incentive": [
+        140
+      ],
+      "mechanism.": [
+        141
+      ],
+      "A": [
+        142
+      ],
+      "wide": [
+        143
+      ],
+      "spectrum": [
+        144
+      ],
+      "are": [
+        149,
+        164
+      ],
+      "then": [
+        150
+      ],
+      "carefully": [
+        151
+      ],
+      "reviewed": [
+        152
+      ],
+      "accompanied": [
+        153
+      ],
+      "by": [
+        154
+      ],
+      "algorithmic": [
+        155
+      ],
+      "abstractions": [
+        156
+      ],
+      "vulnerability": [
+        158
+      ],
+      "analyses.": [
+        159
+      ],
+      "The": [
+        160
+      ],
+      "surveyed": [
+        161
+      ],
+      "analyzed": [
+        165
+      ],
+      "using": [
+        166
+      ],
+      "five-component": [
+        168
+      ],
+      "framework": [
+        169
+      ],
+      "compared": [
+        171
+      ],
+      "with": [
+        172
+      ],
+      "respect": [
+        173
+      ],
+      "different": [
+        175
+      ],
+      "metrics.": [
+        177
+      ],
+      "These": [
+        178
+      ],
+      "analyses": [
+        179
+      ],
+      "comparisons": [
+        181
+      ],
+      "provide": [
+        182,
+        214
+      ],
+      "us": [
+        183
+      ],
+      "new": [
+        184
+      ],
+      "insights": [
+        185
+      ],
+      "fundamental": [
+        188
+      ],
+      "differences": [
+        189
+      ],
+      "proposals": [
+        192
+      ],
+      "terms": [
+        194
+      ],
+      "their": [
+        196
+      ],
+      "suitable": [
+        197
+      ],
+      "scenarios,": [
+        199
+      ],
+      "assumptions,": [
+        201
+      ],
+      "expected": [
+        202
+      ],
+      "tolerance,": [
+        204
+      ],
+      "scalability,": [
+        205
+      ],
+      "drawbacks": [
+        206
+      ],
+      "trade-offs.": [
+        208
+      ],
+      "believe": [
+        210
+      ],
+      "survey": [
+        212
+      ],
+      "will": [
+        213
+      ],
+      "developers": [
+        216
+      ],
+      "researchers": [
+        218
+      ],
+      "view": [
+        221
+      ],
+      "process": [
+        230
+      ],
+      "designing": [
+        232
+      ],
+      "future": [
+        233
+      ]
+    }
+  },
+  {
+    "title": "Blockchain for the metaverse: A Review",
+    "year": 2023,
+    "doi": "https://doi.org/10.1016/j.future.2023.02.008",
+    "file_path": "papers\\blockchain\\2023-Blockchain for the metaverse A Review.pdf",
+    "authors": [
+      "Thien Huynh‐The",
+      "Thippa Reddy Gadekallu",
+      "Weizheng Wang"
+    ],
+    "abstract": {
+      "Since": [
+        0
+      ],
+      "Facebook": [
+        1
+      ],
+      "officially": [
+        2
+      ],
+      "changed": [
+        3
+      ],
+      "its": [
+        4,
+        58,
+        74
+      ],
+      "name": [
+        5
+      ],
+      "to": [
+        6,
+        29,
+        36,
+        56,
+        73,
+        94,
+        112,
+        206,
+        223
+      ],
+      "Meta": [
+        7
+      ],
+      "in": [
+        8,
+        51,
+        89,
+        184,
+        212,
+        235,
+        238
+      ],
+      "Oct.": [
+        9
+      ],
+      "2021,": [
+        10
+      ],
+      "the": [
+        11,
+        52,
+        85,
+        90,
+        100,
+        105,
+        115,
+        119,
+        122,
+        127,
+        136,
+        161,
+        165,
+        177,
+        185,
+        208,
+        231,
+        236,
+        239
+      ],
+      "metaverse": [
+        12,
+        27,
+        53,
+        116,
+        137,
+        166,
+        213,
+        237
+      ],
+      "has": [
+        13
+      ],
+      "become": [
+        14
+      ],
+      "a": [
+        15,
+        48,
+        69,
+        110
+      ],
+      "new": [
+        16
+      ],
+      "norm": [
+        17
+      ],
+      "of": [
+        18,
+        77,
+        87,
+        102,
+        124,
+        164,
+        179,
+        210,
+        233
+      ],
+      "social": [
+        19
+      ],
+      "networks": [
+        20
+      ],
+      "and": [
+        21,
+        33,
+        46,
+        62,
+        80,
+        114,
+        117,
+        151,
+        167,
+        192,
+        197,
+        215,
+        228
+      ],
+      "three-dimensional": [
+        22
+      ],
+      "(3D)": [
+        23
+      ],
+      "virtual": [
+        24
+      ],
+      "worlds.": [
+        25
+      ],
+      "The": [
+        26
+      ],
+      "aims": [
+        28
+      ],
+      "bring": [
+        30
+      ],
+      "3D": [
+        31
+      ],
+      "immersive": [
+        32,
+        193
+      ],
+      "personalized": [
+        34
+      ],
+      "experiences": [
+        35
+      ],
+      "users": [
+        37
+      ],
+      "by": [
+        38
+      ],
+      "leveraging": [
+        39
+      ],
+      "many": [
+        40
+      ],
+      "pertinent": [
+        41
+      ],
+      "technologies.": [
+        42
+      ],
+      "Despite": [
+        43
+      ],
+      "great": [
+        44
+      ],
+      "attention": [
+        45
+      ],
+      "benefits,": [
+        47
+      ],
+      "natural": [
+        49
+      ],
+      "question": [
+        50
+      ],
+      "is": [
+        54,
+        68
+      ],
+      "how": [
+        55,
+        170
+      ],
+      "secure": [
+        57
+      ],
+      "users'": [
+        59
+      ],
+      "digital": [
+        60,
+        189
+      ],
+      "content": [
+        61
+      ],
+      "data.": [
+        63,
+        199
+      ],
+      "In": [
+        64
+      ],
+      "this": [
+        65
+      ],
+      "regard,": [
+        66
+      ],
+      "blockchain": [
+        67,
+        88,
+        103,
+        113,
+        125,
+        171,
+        180,
+        211,
+        234
+      ],
+      "promising": [
+        70,
+        221
+      ],
+      "solution": [
+        71
+      ],
+      "owing": [
+        72
+      ],
+      "distinct": [
+        75
+      ],
+      "features": [
+        76
+      ],
+      "decentralization,": [
+        78
+      ],
+      "immutability,": [
+        79
+      ],
+      "transparency.": [
+        81
+      ],
+      "To": [
+        82
+      ],
+      "better": [
+        83
+      ],
+      "understand": [
+        84
+      ],
+      "role": [
+        86,
+        209
+      ],
+      "metaverse,": [
+        91,
+        186
+      ],
+      "we": [
+        92,
+        130,
+        158,
+        175,
+        218
+      ],
+      "aim": [
+        93
+      ],
+      "provide": [
+        95
+      ],
+      "an": [
+        96
+      ],
+      "extensive": [
+        97
+      ],
+      "survey": [
+        98
+      ],
+      "on": [
+        99,
+        181
+      ],
+      "applications": [
+        101,
+        214
+      ],
+      "for": [
+        104,
+        126,
+        135
+      ],
+      "metaverse.": [
+        106,
+        128
+      ],
+      "We": [
+        107,
+        200
+      ],
+      "first": [
+        108,
+        159
+      ],
+      "present": [
+        109,
+        202,
+        219
+      ],
+      "preliminary": [
+        111
+      ],
+      "highlight": [
+        118,
+        169
+      ],
+      "motivations": [
+        120
+      ],
+      "behind": [
+        121
+      ],
+      "use": [
+        123,
+        232
+      ],
+      "Next,": [
+        129
+      ],
+      "extensively": [
+        131
+      ],
+      "discuss": [
+        132,
+        160
+      ],
+      "blockchain-based": [
+        133
+      ],
+      "methods": [
+        134
+      ],
+      "from": [
+        138
+      ],
+      "technical": [
+        139,
+        162
+      ],
+      "perspectives,": [
+        140
+      ],
+      "such": [
+        141
+      ],
+      "as": [
+        142
+      ],
+      "data": [
+        143,
+        145,
+        147,
+        149,
+        152
+      ],
+      "acquisition,": [
+        144
+      ],
+      "storage,": [
+        146
+      ],
+      "sharing,": [
+        148
+      ],
+      "interoperability,": [
+        150
+      ],
+      "privacy": [
+        153
+      ],
+      "preservation.": [
+        154
+      ],
+      "For": [
+        155
+      ],
+      "each": [
+        156
+      ],
+      "perspective,": [
+        157
+      ],
+      "challenges": [
+        163
+      ],
+      "then": [
+        168
+      ],
+      "can": [
+        172
+      ],
+      "help.": [
+        173
+      ],
+      "Moreover,": [
+        174
+      ],
+      "investigate": [
+        176
+      ],
+      "impact": [
+        178
+      ],
+      "key-enabling": [
+        182
+      ],
+      "technologies": [
+        183
+      ],
+      "including": [
+        187
+      ],
+      "Internet-of-Things,": [
+        188
+      ],
+      "twins,": [
+        190
+      ],
+      "multi-sensory": [
+        191
+      ],
+      "applications,": [
+        194
+      ],
+      "artificial": [
+        195
+      ],
+      "intelligence,": [
+        196
+      ],
+      "big": [
+        198
+      ],
+      "also": [
+        201
+      ],
+      "some": [
+        203,
+        220
+      ],
+      "major": [
+        204
+      ],
+      "projects": [
+        205
+      ],
+      "showcase": [
+        207
+      ],
+      "services.": [
+        216
+      ],
+      "Finally,": [
+        217
+      ],
+      "directions": [
+        222
+      ],
+      "drive": [
+        224
+      ],
+      "further": [
+        225
+      ],
+      "research": [
+        226
+      ],
+      "innovations": [
+        227
+      ],
+      "developments": [
+        229
+      ],
+      "toward": [
+        230
+      ],
+      "future.": [
+        240
+      ]
+    }
+  },
+  {
+    "title": "Solutions to Scalability of Blockchain: A Survey",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/access.2020.2967218",
+    "file_path": "papers\\blockchain\\2020-Solutions to Scalability of Blockchain A Survey.pdf",
+    "authors": [
+      "Qiheng Zhou",
+      "Huawei Huang",
+      "Zibin Zheng"
+    ],
+    "abstract": {
+      "Blockchain-based": [
+        0
+      ],
+      "decentralized": [
+        1
+      ],
+      "cryptocurrencies": [
+        2,
+        42
+      ],
+      "have": [
+        3
+      ],
+      "drawn": [
+        4
+      ],
+      "much": [
+        5
+      ],
+      "attention": [
+        6
+      ],
+      "and": [
+        7,
+        22,
+        37,
+        70,
+        83
+      ],
+      "been": [
+        8
+      ],
+      "widely-deployed": [
+        9
+      ],
+      "in": [
+        10,
+        26
+      ],
+      "recent": [
+        11
+      ],
+      "years.": [
+        12
+      ],
+      "Bitcoin,": [
+        13
+      ],
+      "the": [
+        14,
+        48,
+        55,
+        64,
+        90
+      ],
+      "first": [
+        15
+      ],
+      "application": [
+        16
+      ],
+      "of": [
+        17,
+        34,
+        57,
+        93
+      ],
+      "blockchain,": [
+        18
+      ],
+      "achieves": [
+        19
+      ],
+      "great": [
+        20
+      ],
+      "success": [
+        21
+      ],
+      "promotes": [
+        23
+      ],
+      "more": [
+        24,
+        52
+      ],
+      "development": [
+        25
+      ],
+      "this": [
+        27
+      ],
+      "field.": [
+        28
+      ],
+      "However,": [
+        29
+      ],
+      "Bitcoin": [
+        30
+      ],
+      "encounters": [
+        31
+      ],
+      "performance": [
+        32
+      ],
+      "problems": [
+        33
+      ],
+      "low": [
+        35
+      ],
+      "throughput": [
+        36
+      ],
+      "high": [
+        38
+      ],
+      "transaction": [
+        39
+      ],
+      "latency.": [
+        40
+      ],
+      "Other": [
+        41
+      ],
+      "based": [
+        43
+      ],
+      "on": [
+        44
+      ],
+      "proof-of-work": [
+        45
+      ],
+      "also": [
+        46
+      ],
+      "inherit": [
+        47
+      ],
+      "flaws,": [
+        49
+      ],
+      "leading": [
+        50
+      ],
+      "to": [
+        51,
+        62
+      ],
+      "concerns": [
+        53
+      ],
+      "about": [
+        54
+      ],
+      "scalability": [
+        56,
+        91
+      ],
+      "blockchain.": [
+        58,
+        94
+      ],
+      "This": [
+        59
+      ],
+      "paper": [
+        60
+      ],
+      "attempts": [
+        61
+      ],
+      "cover": [
+        63
+      ],
+      "existing": [
+        65
+      ],
+      "scaling": [
+        66
+      ],
+      "solutions": [
+        67
+      ],
+      "for": [
+        68,
+        88
+      ],
+      "blockchain": [
+        69
+      ],
+      "classify": [
+        71
+      ],
+      "them": [
+        72
+      ],
+      "by": [
+        73
+      ],
+      "level.": [
+        74
+      ],
+      "In": [
+        75
+      ],
+      "addition,": [
+        76
+      ],
+      "we": [
+        77
+      ],
+      "make": [
+        78
+      ],
+      "comparisons": [
+        79
+      ],
+      "between": [
+        80
+      ],
+      "different": [
+        81
+      ],
+      "methods": [
+        82
+      ],
+      "list": [
+        84
+      ],
+      "some": [
+        85
+      ],
+      "potential": [
+        86
+      ],
+      "directions": [
+        87
+      ],
+      "solving": [
+        89
+      ],
+      "problem": [
+        92
+      ]
+    }
+  },
+  {
+    "title": "Blockchain for Industry 4.0: A Comprehensive Review",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/access.2020.2988579",
+    "file_path": "papers\\blockchain\\2020-Blockchain for Industry 40 A Comprehensive Review.pdf",
+    "authors": [
+      "Umesh Bodkhe",
+      "Sudeep Tanwar",
+      "Karan Parekh"
+    ],
+    "abstract": {
+      "Due": [
+        0
+      ],
+      "to": [
+        1,
+        78,
+        125,
+        228,
+        244,
+        248
+      ],
+      "the": [
+        2,
+        7,
+        17,
+        42,
+        55,
+        58,
+        76,
+        80,
+        88,
+        95,
+        113,
+        139,
+        148,
+        186,
+        191,
+        195,
+        201,
+        206,
+        219,
+        249
+      ],
+      "proliferation": [
+        3
+      ],
+      "of": [
+        4,
+        19,
+        54,
+        57,
+        83,
+        101,
+        112,
+        147,
+        162,
+        218,
+        236
+      ],
+      "ICT": [
+        5
+      ],
+      "during": [
+        6
+      ],
+      "last": [
+        8
+      ],
+      "few": [
+        9,
+        121
+      ],
+      "decades,": [
+        10
+      ],
+      "there": [
+        11
+      ],
+      "is": [
+        12
+      ],
+      "an": [
+        13
+      ],
+      "exponential": [
+        14
+      ],
+      "increase": [
+        15
+      ],
+      "in": [
+        16,
+        52,
+        154,
+        169,
+        176,
+        180,
+        190,
+        209,
+        226,
+        254
+      ],
+      "usage": [
+        18,
+        56
+      ],
+      "various": [
+        20,
+        163,
+        170,
+        210,
+        242,
+        255
+      ],
+      "smart": [
+        21,
+        25,
+        27,
+        85,
+        196
+      ],
+      "applications": [
+        22
+      ],
+      "such": [
+        23
+      ],
+      "as": [
+        24
+      ],
+      "farming,": [
+        26
+      ],
+      "healthcare,": [
+        28
+      ],
+      "supply-chain": [
+        29
+      ],
+      "&": [
+        30
+      ],
+      "logistics,": [
+        31
+      ],
+      "business,": [
+        32
+      ],
+      "tourism": [
+        33
+      ],
+      "and": [
+        34,
+        46,
+        70,
+        107,
+        123,
+        135,
+        166,
+        216
+      ],
+      "hospitality,": [
+        35
+      ],
+      "energy": [
+        36
+      ],
+      "management": [
+        37
+      ],
+      "etc.": [
+        38
+      ],
+      "However,": [
+        39
+      ],
+      "for": [
+        40,
+        63,
+        194,
+        205
+      ],
+      "all": [
+        41
+      ],
+      "aforementioned": [
+        43,
+        84,
+        140
+      ],
+      "applications,": [
+        44,
+        86
+      ],
+      "security": [
+        45,
+        68,
+        81,
+        115,
+        221,
+        239
+      ],
+      "privacy": [
+        47
+      ],
+      "are": [
+        48,
+        91,
+        179,
+        223
+      ],
+      "major": [
+        49
+      ],
+      "concerns": [
+        50
+      ],
+      "keeping": [
+        51
+      ],
+      "view": [
+        53
+      ],
+      "open": [
+        59
+      ],
+      "channel,": [
+        60
+      ],
+      "i.e.,": [
+        61
+      ],
+      "Internet": [
+        62
+      ],
+      "data": [
+        64,
+        129
+      ],
+      "transfer.": [
+        65
+      ],
+      "Although": [
+        66
+      ],
+      "many": [
+        67
+      ],
+      "solutions": [
+        69,
+        90,
+        116,
+        165,
+        189,
+        222,
+        240
+      ],
+      "standards": [
+        71
+      ],
+      "have": [
+        72,
+        117
+      ],
+      "been": [
+        73
+      ],
+      "proposed": [
+        74
+      ],
+      "over": [
+        75
+      ],
+      "years": [
+        77
+      ],
+      "enhance": [
+        79
+      ],
+      "levels": [
+        82
+      ],
+      "but": [
+        87
+      ],
+      "existing": [
+        89,
+        114,
+        237
+      ],
+      "either": [
+        92
+      ],
+      "based": [
+        93
+      ],
+      "upon": [
+        94
+      ],
+      "centralized": [
+        96
+      ],
+      "architecture": [
+        97,
+        203
+      ],
+      "(having": [
+        98
+      ],
+      "single": [
+        99
+      ],
+      "point": [
+        100
+      ],
+      "failure)": [
+        102
+      ],
+      "or": [
+        103
+      ],
+      "having": [
+        104
+      ],
+      "high": [
+        105
+      ],
+      "computation": [
+        106
+      ],
+      "communication": [
+        108
+      ],
+      "costs.": [
+        109
+      ],
+      "Moreover,": [
+        110
+      ],
+      "most": [
+        111
+      ],
+      "focussed": [
+        118
+      ],
+      "only": [
+        119
+      ],
+      "on": [
+        120
+      ],
+      "aspects": [
+        122
+      ],
+      "fail": [
+        124
+      ],
+      "address": [
+        126
+      ],
+      "scalability,": [
+        127
+      ],
+      "robustness,": [
+        128
+      ],
+      "storage,": [
+        130
+      ],
+      "network": [
+        131
+      ],
+      "latency,": [
+        132
+      ],
+      "auditability,": [
+        133
+      ],
+      "immutability,": [
+        134
+      ],
+      "traceability.": [
+        136
+      ],
+      "To": [
+        137
+      ],
+      "handle": [
+        138
+      ],
+      "issues,": [
+        141
+      ],
+      "blockchain": [
+        142,
+        192,
+        207
+      ],
+      "technology": [
+        143,
+        193
+      ],
+      "can": [
+        144
+      ],
+      "be": [
+        145
+      ],
+      "one": [
+        146
+      ],
+      "solutions.": [
+        149
+      ],
+      "Motivated": [
+        150
+      ],
+      "from": [
+        151
+      ],
+      "these": [
+        152
+      ],
+      "facts,": [
+        153
+      ],
+      "this": [
+        155,
+        177
+      ],
+      "paper,": [
+        156
+      ],
+      "we": [
+        157,
+        184,
+        199,
+        232
+      ],
+      "present": [
+        158
+      ],
+      "a": [
+        159,
+        234
+      ],
+      "systematic": [
+        160
+      ],
+      "review": [
+        161
+      ],
+      "blockchain-based": [
+        164,
+        238
+      ],
+      "their": [
+        167,
+        229
+      ],
+      "applicability": [
+        168,
+        208,
+        253
+      ],
+      "Industry": [
+        171,
+        211
+      ],
+      "4.0-based": [
+        172
+      ],
+      "applications.": [
+        173,
+        197,
+        213,
+        256
+      ],
+      "Our": [
+        174
+      ],
+      "contributions": [
+        175
+      ],
+      "paper": [
+        178
+      ],
+      "four": [
+        181
+      ],
+      "fold.": [
+        182
+      ],
+      "Firstly,": [
+        183
+      ],
+      "explored": [
+        185
+      ],
+      "current": [
+        187
+      ],
+      "state-of-the-art": [
+        188
+      ],
+      "Then,": [
+        198,
+        214
+      ],
+      "illustrated": [
+        200
+      ],
+      "reference": [
+        202
+      ],
+      "used": [
+        204
+      ],
+      "4.0": [
+        212
+      ],
+      "merits": [
+        215
+      ],
+      "demerits": [
+        217
+      ],
+      "traditional": [
+        220
+      ],
+      "also": [
+        224
+      ],
+      "discussed": [
+        225
+      ],
+      "comparison": [
+        227,
+        235
+      ],
+      "countermeasures.": [
+        230
+      ],
+      "Finally,": [
+        231
+      ],
+      "provided": [
+        233
+      ],
+      "using": [
+        241
+      ],
+      "parameters": [
+        243
+      ],
+      "provide": [
+        245
+      ],
+      "deep": [
+        246
+      ],
+      "insights": [
+        247
+      ],
+      "readers": [
+        250
+      ],
+      "about": [
+        251
+      ],
+      "its": [
+        252
+      ]
+    }
+  },
+  {
+    "title": "Blockchain technology in supply chain operations: Applications, challenges and research opportunities",
+    "year": 2020,
+    "doi": "https://doi.org/10.1016/j.tre.2020.102067",
+    "file_path": "papers\\blockchain\\2020-Blockchain technology in supply chain operations Applications challenges and res.pdf",
+    "authors": [
+      "Pankaj Dutta",
+      "Tsan‐Ming Choi",
+      "Surabhi Somani"
+    ],
+    "abstract": null
+  }
+]

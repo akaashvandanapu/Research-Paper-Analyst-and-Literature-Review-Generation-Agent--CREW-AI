@@ -1,0 +1,33 @@
+{
+  "topic": "blockchain",
+  "keywords": [
+    "blockchain technology",
+    "decentralization",
+    "distributed ledger",
+    "smart contracts",
+    "cryptocurrency",
+    "peer-to-peer network",
+    "blockchain applications",
+    "scalability in blockchain",
+    "blockchain security",
+    "consensus algorithms",
+    "tokenization",
+    "blockchain governance",
+    "blockchain and data privacy",
+    "blockchain interoperability",
+    "blockchain innovations"
+  ],
+  "research_questions": [
+    "What methodologies are used in this field?",
+    "What are the key findings and results?",
+    "What are current limitations and gaps?",
+    "What future directions are emerging?"
+  ],
+  "year_range": [2020, 2025],
+  "target_count": 5,
+  "quality_criteria": [
+    "citation count",
+    "journal quality",
+    "methodology rigor"
+  ]
+}
