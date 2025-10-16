@@ -14,6 +14,7 @@ This system uses 6 specialized AI agents to automate the entire literature revie
 
 ### Installation
 
+```bash
 # Clone repository
 git clone <your-repo-url>
 cd research_analyst_literature_generator
@@ -24,23 +25,29 @@ source .venv/bin/activate  # Windows: .venv\Scripts\activate
 
 # Install dependencies
 pip install -e .
+```
 
 ### Configuration
 
 Create `.env` file:
 
+```env
 OPENAI_API_KEY=sk-your-key-here
 OPENALEX_MAILTO=your-email@example.com
 UNPAYWALL_EMAIL=your-email@example.com
+```
 
 ### Run
 
+```bash
 crewai run
+```
 
 Enter your research topic when prompted, and wait for the system to generate the complete literature review.
 
 ## 📁 Project Structure
 
+```
 research_analyst_literature_generator/
 ├── outputs/                          # Generated files
 │   ├── research_strategy.json
@@ -62,6 +69,7 @@ research_analyst_literature_generator/
 │       ├── agents.yaml               # Agent definitions
 │       └── tasks.yaml                # Task descriptions
 └── .env                              # API keys
+```
 
 ## 🤖 System Architecture
 
@@ -76,6 +84,7 @@ research_analyst_literature_generator/
 
 ### Workflow
 
+```
 User Input (Topic)
     ↓
 Agent 1: Strategy → research_strategy.json
@@ -89,6 +98,7 @@ Agent 4: Synthesis  Agent 5: Evaluation  (Parallel capable)
 └───────────────┴───────────────┘
     ↓
 Agent 6: Report → literature_review_final.md
+```
 
 ### Tools
 
@@ -116,24 +126,31 @@ The system generates:
 
 ## 🔧 Troubleshooting
 
-**File not found errors:**
+### File not found errors
 
-Ensure paths use outputs/ prefix in tasks.yaml
-Read file: outputs/extracted_content.json
+Ensure paths use `outputs/` prefix in `tasks.yaml`:
 
-**Unicode errors:**
+```yaml
+# Read file: outputs/extracted_content.json
+```
 
-Use UTF-8 encoding in all tools
+### Unicode errors
+
+Use UTF-8 encoding in all tools:
+
+```python
 with open(file, 'r', encoding='utf-8') as f:
     data = json.load(f)
+```
 
-**API rate limits:**
+### API rate limits
 
 - Use GPT-4o-mini (higher limits)
 - Or switch to local Ollama
 
 ## 📦 Requirements
 
+```
 Python 3.10+
 crewai[tools]>=0.70.0
 python-dotenv>=1.0.0
@@ -141,21 +158,19 @@ pymupdf>=1.24.0
 pandas>=2.2.0
 requests>=2.31.0
 scidownl>=1.0.0
+```
 
 ## 🎯 Assignment Criteria Met
 
-✅ 6 agents with role specialization  
-✅ Sequential + parallel execution architecture  
-✅ Role-tailored prompts in YAML configs  
-✅ Context sharing via 5 JSON intermediate files  
-✅ 5 tools integrated (4 custom + 1 prebuilt)  
-✅ Structured outputs (JSON + Markdown)  
-
-## 📝 License
-
-MIT License
+- ✅ 6 agents with role specialization
+- ✅ Sequential + parallel execution architecture
+- ✅ Role-tailored prompts in YAML configs
+- ✅ Context sharing via 5 JSON intermediate files
+- ✅ 5 tools integrated (4 custom + 1 prebuilt)
+- ✅ Structured outputs (JSON + Markdown)
 
 ## 👨‍💻 Author
 
-Akaash Gupta Vandanapu
+**Akaash Gupta Vandanapu**  
+
 akaashgupta2005@gmail.com
