@@ -16,15 +16,12 @@ This system uses 6 specialized AI agents to automate the entire literature revie
 
 ```bash
 # Clone repository
-git clone <your-repo-url>
+git clone https://github.com/akaashvandanapu/Research-Paper-Analyst-and-Literature-Review-Generation-Agent--CREW-AI
 cd research_analyst_literature_generator
 
-# Create virtual environment
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+# Install Crew AI
+pip install crewai
 
-# Install dependencies
-pip install -e .
 ```
 
 ### Configuration
@@ -40,6 +37,8 @@ UNPAYWALL_EMAIL=your-email@example.com
 ### Run
 
 ```bash
+# Install Dependencies and Initiate Crew
+crewai install
 crewai run
 ```
 
@@ -93,9 +92,9 @@ Agent 2: Download → papers/*.pdf + paper_metadata.json
     ↓
 Agent 3: Extract → extracted_content.json
     ↓
-┌───────────────┬───────────────┐
+┌───────────────┬─────────────────────┐
 Agent 4: Synthesis  Agent 5: Evaluation  (Parallel capable)
-└───────────────┴───────────────┘
+└───────────────┴─────────────────────┘
     ↓
 Agent 6: Report → literature_review_final.md
 ```
